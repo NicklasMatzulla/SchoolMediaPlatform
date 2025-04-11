@@ -1,0 +1,103 @@
+.multi-choice {
+    font-size: 1.2em;
+    color: #e0e0e0;
+}
+
+.multi-choice-block {
+    margin-bottom: 15px;
+}
+
+.multi-choice-question {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.multi-choice-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+}
+
+.multi-choice-option input {
+    display: none;
+}
+
+.custom-input {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.multi-choice-option input[type="radio"] + .custom-input {
+    border-radius: 50%;
+}
+
+.multi-choice-option input:checked + .custom-input {
+    background: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+.multi-choice-option input[type="radio"]:checked + .custom-input::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.multi-choice-option input[type="checkbox"]:checked + .custom-input::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.multi-choice-option.error {
+    color: #ff5252;
+}
+
+.multi-choice-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.multi-choice-button:hover {
+    background: #444;
+}
+
+.final-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.final-message.success {
+    color: #4caf50;
+}
+
+.final-message.fail {
+    color: #ff5252;
+}

@@ -1,0 +1,51 @@
+.cloze-text {
+    margin: 10px 0;
+}
+
+.cloze-input {
+    width: 80px;
+    height: 18px;
+    padding: 2px 5px;
+    margin: 0 3px;
+    background-color: transparent;
+    color: inherit;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: border-bottom 0.3s ease;
+}
+
+.cloze-input:focus {
+    border-bottom: 1px solid #007bff;
+    outline: none;
+}
+
+.cloze-input.error {
+    border-bottom: 1px solid #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.cloze-button {
+    transition: color 0.3s ease;
+}
+
+.cloze-button.correct {
+    color: #28a745;
+}
+
+.cloze-button.wrong {
+    color: #dc3545;
+}
+
+/* Endtext */
+.final-message {
+    margin-top: 10px;
+}
+
+.final-message.success {
+    color: #28a745;
+}
+
+.final-message.fail {
+    color: #dc3545;
+}
